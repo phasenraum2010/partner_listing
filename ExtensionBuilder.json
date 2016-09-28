@@ -119,9 +119,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "contactPerson",
+                            "propertyName": "country",
                             "propertyType": "String",
-                            "uid": "659971482835"
+                            "uid": "513711411560"
                         },
                         {
                             "allowedFileTypes": "",
@@ -129,9 +129,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "country",
+                            "propertyName": "contactPerson",
                             "propertyType": "String",
-                            "uid": "513711411560"
+                            "uid": "659971482835"
                         },
                         {
                             "allowedFileTypes": "",
@@ -182,6 +182,26 @@
                             "propertyName": "contactImage",
                             "propertyType": "Image",
                             "uid": "1346986813396"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "imprint",
+                            "propertyType": "RichText",
+                            "uid": "602547183417"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "termsAndConditions",
+                            "propertyType": "RichText",
+                            "uid": "240508618044"
                         }
                     ]
                 },
@@ -233,7 +253,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2016-09-28 01:54",
+        "last_modified": "2016-09-28 02:23",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-28T13:54:04Z" product-name="partner_listing">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-28T14:23:47Z" product-name="partner_listing">
 		<header/>
 		<body>
 			<trans-unit id="tx_partnerlisting_domain_model_partner">
@@ -30,11 +30,11 @@
 			<trans-unit id="tx_partnerlisting_domain_model_partner.city">
 				<source>City</source>
 			</trans-unit>
-			<trans-unit id="tx_partnerlisting_domain_model_partner.contact_person">
-				<source>Contact Person</source>
-			</trans-unit>
 			<trans-unit id="tx_partnerlisting_domain_model_partner.country">
 				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.contact_person">
+				<source>Contact Person</source>
 			</trans-unit>
 			<trans-unit id="tx_partnerlisting_domain_model_partner.info">
 				<source>Info</source>
@@ -50,6 +50,12 @@
 			</trans-unit>
 			<trans-unit id="tx_partnerlisting_domain_model_partner.contact_image">
 				<source>Contact Image</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.imprint">
+				<source>Imprint</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.terms_and_conditions">
+				<source>Terms And Conditions</source>
 			</trans-unit>
 		</body>
 	</file>

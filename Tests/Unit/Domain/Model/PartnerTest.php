@@ -242,33 +242,6 @@ class PartnerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getContactPersonReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getContactPerson()
-        );
-
-    }
-
-    /**
-     * @test
-     */
-    public function setContactPersonForStringSetsContactPerson()
-    {
-        $this->subject->setContactPerson('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'contactPerson',
-            $this->subject
-        );
-
-    }
-
-    /**
-     * @test
-     */
     public function getCountryReturnsInitialValueForString()
     {
         self::assertSame(
@@ -288,6 +261,33 @@ class PartnerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         self::assertAttributeEquals(
             'Conceived at T3CON10',
             'country',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getContactPersonReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getContactPerson()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setContactPersonForStringSetsContactPerson()
+    {
+        $this->subject->setContactPerson('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'contactPerson',
             $this->subject
         );
 
@@ -426,6 +426,60 @@ class PartnerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         self::assertAttributeEquals(
             $fileReferenceFixture,
             'contactImage',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getImprintReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getImprint()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setImprintForStringSetsImprint()
+    {
+        $this->subject->setImprint('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'imprint',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getTermsAndConditionsReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getTermsAndConditions()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setTermsAndConditionsForStringSetsTermsAndConditions()
+    {
+        $this->subject->setTermsAndConditions('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'termsAndConditions',
             $this->subject
         );
 

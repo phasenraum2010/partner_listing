@@ -19,14 +19,14 @@ return [
 			'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'name,url_part,email,phone,fax,street,post_code,city,contact_person,country,info,info_image,service,service_image,contact_image,',
+        'searchFields' => 'name,url_part,email,phone,fax,street,post_code,city,country,contact_person,info,info_image,service,service_image,contact_image,imprint,terms_and_conditions,',
         'iconfile' => 'EXT:partner_listing/Resources/Public/Icons/tx_partnerlisting_domain_model_partner.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, url_part, email, phone, fax, street, post_code, city, contact_person, country, info, info_image, service, service_image, contact_image',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, url_part, email, phone, fax, street, post_code, city, country, contact_person, info, info_image, service, service_image, contact_image, imprint, terms_and_conditions',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, url_part, email, phone, fax, street, post_code, city, contact_person, country, info, info_image, service, service_image, contact_image, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, url_part, email, phone, fax, street, post_code, city, country, contact_person, info, info_image, service, service_image, contact_image, imprint, terms_and_conditions, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -190,9 +190,9 @@ return [
 			],
 	        
 	    ],
-	    'contact_person' => [
+	    'country' => [
 	        'exclude' => 1,
-	        'label' => 'LLL:EXT:partner_listing/Resources/Private/Language/locallang_db.xlf:tx_partnerlisting_domain_model_partner.contact_person',
+	        'label' => 'LLL:EXT:partner_listing/Resources/Private/Language/locallang_db.xlf:tx_partnerlisting_domain_model_partner.country',
 	        'config' => [
 			    'type' => 'input',
 			    'size' => 30,
@@ -200,9 +200,9 @@ return [
 			],
 	        
 	    ],
-	    'country' => [
+	    'contact_person' => [
 	        'exclude' => 1,
-	        'label' => 'LLL:EXT:partner_listing/Resources/Private/Language/locallang_db.xlf:tx_partnerlisting_domain_model_partner.country',
+	        'label' => 'LLL:EXT:partner_listing/Resources/Private/Language/locallang_db.xlf:tx_partnerlisting_domain_model_partner.contact_person',
 	        'config' => [
 			    'type' => 'input',
 			    'size' => 30,
@@ -372,6 +372,28 @@ return [
 			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 	        
+	    ],
+	    'imprint' => [
+	        'exclude' => 1,
+	        'label' => 'LLL:EXT:partner_listing/Resources/Private/Language/locallang_db.xlf:tx_partnerlisting_domain_model_partner.imprint',
+	        'config' => [
+			    'type' => 'text',
+			    'cols' => 40,
+			    'rows' => 15,
+			    'eval' => 'trim',
+			],
+	        'defaultExtras' => 'richtext:rte_transform[mode=ts_css]'
+	    ],
+	    'terms_and_conditions' => [
+	        'exclude' => 1,
+	        'label' => 'LLL:EXT:partner_listing/Resources/Private/Language/locallang_db.xlf:tx_partnerlisting_domain_model_partner.terms_and_conditions',
+	        'config' => [
+			    'type' => 'text',
+			    'cols' => 40,
+			    'rows' => 15,
+			    'eval' => 'trim',
+			],
+	        'defaultExtras' => 'richtext:rte_transform[mode=ts_css]'
 	    ],
         
     ],

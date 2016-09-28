@@ -126,6 +126,20 @@ class Partner extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $contactImage = null;
 
     /**
+     * imprint
+     *
+     * @var string
+     */
+    protected $imprint = '';
+
+    /**
+     * termsAndConditions
+     *
+     * @var string
+     */
+    protected $termsAndConditions = '';
+
+    /**
      * Returns the name
      *
      * @return string $name
@@ -438,5 +452,47 @@ class Partner extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setContactImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $contactImage)
     {
         $this->contactImage = $contactImage;
+    }
+
+    /**
+     * Returns the imprint
+     *
+     * @return string $imprint
+     */
+    public function getImprint()
+    {
+        return $this->imprint;
+    }
+
+    /**
+     * Sets the imprint
+     *
+     * @param string $imprint
+     * @return void
+     */
+    public function setImprint($imprint)
+    {
+        $this->imprint = $imprint;
+    }
+
+    /**
+     * Returns the termsAndConditions
+     *
+     * @return string $termsAndConditions
+     */
+    public function getTermsAndConditions()
+    {
+        return $this->termsAndConditions;
+    }
+
+    /**
+     * Sets the termsAndConditions
+     *
+     * @param string $termsAndConditions
+     * @return void
+     */
+    public function setTermsAndConditions($termsAndConditions)
+    {
+        $this->termsAndConditions = $termsAndConditions;
     }
 }
