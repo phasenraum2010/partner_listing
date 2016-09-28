@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-28T13:54:04Z" product-name="partner_listing">
+		<header/>
+		<body>
+			<trans-unit id="tx_partnerlisting_domain_model_partner">
+				<source>Partner</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.url_part">
+				<source>Url Part</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.post_code">
+				<source>Post Code</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.contact_person">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.info">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.info_image">
+				<source>Info Image</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.service">
+				<source>Service</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.service_image">
+				<source>Service Image</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_partner.contact_image">
+				<source>Contact Image</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

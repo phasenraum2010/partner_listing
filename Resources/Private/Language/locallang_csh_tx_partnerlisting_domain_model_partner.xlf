@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-28T13:54:04Z" product-name="partner_listing">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="url_part.description">
+				<source>urlPart</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="fax.description">
+				<source>fax</source>
+			</trans-unit>
+			<trans-unit id="street.description">
+				<source>street</source>
+			</trans-unit>
+			<trans-unit id="post_code.description">
+				<source>postCode</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="contact_person.description">
+				<source>contactPerson</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>country</source>
+			</trans-unit>
+			<trans-unit id="info.description">
+				<source>info</source>
+			</trans-unit>
+			<trans-unit id="info_image.description">
+				<source>infoImage</source>
+			</trans-unit>
+			<trans-unit id="service.description">
+				<source>service</source>
+			</trans-unit>
+			<trans-unit id="service_image.description">
+				<source>serviceImage</source>
+			</trans-unit>
+			<trans-unit id="contact_image.description">
+				<source>contactImage</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
