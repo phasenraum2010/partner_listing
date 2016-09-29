@@ -10,12 +10,12 @@ call_user_func(
             'Partnerlisting',
             [
                 'Partner' => 'list, show',
-                'Lead' => 'list, show'
+                'Lead' => 'list, show, new, create'
             ],
             // non-cacheable actions
             [
                 'Partner' => '',
-                'Lead' => ''
+                'Lead' => 'create'
             ]
         );
 

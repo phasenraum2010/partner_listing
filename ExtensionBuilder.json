@@ -222,7 +222,7 @@
                 "actionGroup": {
                     "_default0_list": true,
                     "_default1_show": true,
-                    "_default2_new_create": false,
+                    "_default2_new_create": true,
                     "_default3_edit_update": false,
                     "_default4_delete": false,
                     "customActions": []
@@ -388,7 +388,7 @@
         }
     ],
     "log": {
-        "last_modified": "2016-09-29 12:11",
+        "last_modified": "2016-09-29 12:39",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }

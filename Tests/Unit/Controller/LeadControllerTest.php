@@ -55,4 +55,18 @@ class LeadControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
         $this->subject->showAction($lead);
     }
+
+    /**
+     * @test
+     */
+    public function createActionAddsTheGivenLeadToLeadRepository()
+    {
+        $lead = new \ThomasWoehlke\PartnerListing\Domain\Model\Lead();
+
+        $leadRepository = $this->getMock(\ThomasWoehlke\PartnerListing\Domain\Repository\LeadRepository::class, ['add'], [], '', false);
+        $leadRepository->expects(self::once())->method('add')->with($lead);
+        $this->inject($this->subject, 'leadRepository', $leadRepository);
+
+        $this->subject->createAction($lead);
+    }
 }

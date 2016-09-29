@@ -46,4 +46,27 @@ class LeadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $this->view->assign('lead', $lead);
     }
+
+    /**
+     * action new
+     *
+     * @return void
+     */
+    public function newAction()
+    {
+
+    }
+
+    /**
+     * action create
+     *
+     * @param \ThomasWoehlke\PartnerListing\Domain\Model\Lead $newLead
+     * @return void
+     */
+    public function createAction(\ThomasWoehlke\PartnerListing\Domain\Model\Lead $newLead)
+    {
+        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See http://wiki.typo3.org/T3Doc/Extension_Builder/Using_the_Extension_Builder#1._Model_the_domain', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
+        $this->leadRepository->add($newLead);
+        $this->redirect('list');
+    }
 }
