@@ -1,140 +1,80 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-partner-listing" >
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.name" />
-		</td>
-		<td>
-		{partner.name}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.url_part" />
-		</td>
-		<td>
-		{partner.urlPart}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.email" />
-		</td>
-		<td>
-		{partner.email}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.phone" />
-		</td>
-		<td>
-		{partner.phone}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.fax" />
-		</td>
-		<td>
-		{partner.fax}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.street" />
-		</td>
-		<td>
-		{partner.street}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.post_code" />
-		</td>
-		<td>
-		{partner.postCode}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.city" />
-		</td>
-		<td>
-		{partner.city}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.country" />
-		</td>
-		<td>
-		{partner.country}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.contact_person" />
-		</td>
-		<td>
-		{partner.contactPerson}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.info" />
-		</td>
-		<td>
-		{partner.info}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.info_image" />
-		</td>
-		<td>
-				<f:image src="{partner.infoImage.originalResource.publicUrl}" width="200"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.service" />
-		</td>
-		<td>
-		{partner.service}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.service_image" />
-		</td>
-		<td>
-				<f:image src="{partner.serviceImage.originalResource.publicUrl}" width="200"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.contact_image" />
-		</td>
-		<td>
-				<f:image src="{partner.contactImage.originalResource.publicUrl}" width="200"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.imprint" />
-		</td>
-		<td>
-		{partner.imprint}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_partnerlisting_domain_model_partner.terms_and_conditions" />
-		</td>
-		<td>
-		{partner.termsAndConditions}
-		</td>
-	</tr>
-</table>
+
+<div id="tx-partner-listing-microsite">
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+	<li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Unser Studio</a></li>
+	<li role="presentation"><a href="#service" aria-controls="service" role="tab" data-toggle="tab">Leistungen</a></li>
+	<li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Kontakt</a></li>
+	<li role="presentation"><a href="#termsAndConditions" aria-controls="termsAndConditions" role="tab" data-toggle="tab">AGB</a></li>
+	<li role="presentation"><a href="#imprint" aria-controls="imprint" role="tab" data-toggle="tab">Impressum</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="info">
+		<h3>Willkommen in unserem Biomed-Vitalcenter</h3>
+		<div id="info-image">
+			<f:image src="{partner.infoImage.originalResource.publicUrl}"/>
+		</div>
+		<div id="info-text">
+			<f:format.html>{partner.info}</f:format.html>
+		</div>
+		<p>
+			Hotline Telefon: <b>{partner.phone}</b>
+		</p>
+	</div>
+	<div role="tabpanel" class="tab-pane" id="service">
+		<h3>Leistungen</h3>
+		<div id="service-image">
+			<f:image src="{partner.serviceImage.originalResource.publicUrl}"/>
+		</div>
+		<div id="service-text">
+			<f:format.html>{partner.service}</f:format.html>
+		</div>
+	</div>
+	<div role="tabpanel" class="tab-pane" id="contact">
+		<h3>Kontakt</h3>
+		<div id="contact-image">
+			<f:image src="{partner.contactImage.originalResource.publicUrl}"/>
+		</div>
+		<div id="contact-text">
+			<h3>{partner.name}</h3>
+			{partner.street}<br/>
+			{partner.postCode} {partner.city}<br/>
+			{partner.country}<br/>
+			<br/>
+			<table id="contact-table" >
+				<tr>
+					<td><f:translate key="tx_partnerlisting_domain_model_partner.phone" />:</td>
+					<td>&nbsp;<b>{partner.phone}</b></td>
+				</tr>
+				<tr>
+					<td><f:translate key="tx_partnerlisting_domain_model_partner.fax" />:</td>
+					<td>&nbsp;<b>{partner.fax}</b></td>
+				</tr>
+				<tr>
+					<td><f:translate key="tx_partnerlisting_domain_model_partner.contact_person" />:</td>
+					<td>&nbsp;<b>{partner.contactPerson}</b></td>
+				</tr>
+				<tr>
+					<td><f:translate key="tx_partnerlisting_domain_model_partner.email" />:</td>
+					<td>&nbsp;<b>{partner.email}</b></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div role="tabpanel" class="tab-pane" id="termsAndConditions">
+		<h3>AGB</h3>
+		<f:format.html>{partner.termsAndConditions}</f:format.html>
+	</div>
+	<div role="tabpanel" class="tab-pane" id="imprint">
+		<h3>Impressum</h3>
+		<f:format.html>{partner.imprint}</f:format.html>
+	</div>
+</div>
+<hr/>
+
+</div>
 </html>
