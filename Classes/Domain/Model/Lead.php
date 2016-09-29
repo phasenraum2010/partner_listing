@@ -21,6 +21,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * name
      *
      * @var string
+     * @validate NotEmpty, Text
      */
     protected $name = '';
 
@@ -28,6 +29,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * email
      *
      * @var string
+     * @validate NotEmpty, EmailAddress
      */
     protected $email = '';
 
@@ -35,6 +37,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * street
      *
      * @var string
+     * @validate Text
      */
     protected $street = '';
 
@@ -42,6 +45,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * postCodeAndCity
      *
      * @var string
+     * @validate Text
      */
     protected $postCodeAndCity = '';
 
@@ -49,6 +53,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * phone
      *
      * @var string
+     * @validate NotEmpty, Text
      */
     protected $phone = '';
 
@@ -56,6 +61,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * fax
      *
      * @var string
+     * @validate Text
      */
     protected $fax = '';
 
@@ -63,6 +69,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * message
      *
      * @var string
+     * @validate NotEmpty, Text
      */
     protected $message = '';
 
@@ -70,6 +77,7 @@ class Lead extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * the Partner who will receive the message sent by the visitor.
      *
      * @var \ThomasWoehlke\PartnerListing\Domain\Model\Partner
+     * @validate NotEmpty
      */
     protected $receiver = null;
 

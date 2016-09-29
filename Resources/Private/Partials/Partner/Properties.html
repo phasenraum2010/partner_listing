@@ -63,6 +63,12 @@
 					<td>&nbsp;<b>{partner.email}</b></td>
 				</tr>
 			</table>
+			<br/>
+			<f:render partial="FormErrors" arguments="{object:Lead}" />
+			<f:form controller="Lead" action="create" enctype="multipart/form-data"  name="newLead" object="{newLead}">
+				<f:render partial="Lead/FormFields" arguments="{partner:partner}"/>
+				<f:form.submit value="Absenden" class="btn btn-default" />
+			</f:form>
 		</div>
 	</div>
 	<div role="tabpanel" class="tab-pane" id="termsAndConditions">

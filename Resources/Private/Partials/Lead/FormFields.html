@@ -1,30 +1,45 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<label for="name">
-	<f:translate key="tx_partnerlisting_domain_model_lead.name" />
-</label><br />
-	<f:form.textfield property="name" /><br />
-<label for="email">
-	<f:translate key="tx_partnerlisting_domain_model_lead.email" />
-</label><br />
-	<f:form.textfield property="email" /><br />
-<label for="street">
-	<f:translate key="tx_partnerlisting_domain_model_lead.street" />
-</label><br />
-	<f:form.textfield property="street" /><br />
-<label for="postCodeAndCity">
-	<f:translate key="tx_partnerlisting_domain_model_lead.post_code_and_city" />
-</label><br />
-	<f:form.textfield property="postCodeAndCity" /><br />
-<label for="phone">
-	<f:translate key="tx_partnerlisting_domain_model_lead.phone" />
-</label><br />
-	<f:form.textfield property="phone" /><br />
-<label for="fax">
-	<f:translate key="tx_partnerlisting_domain_model_lead.fax" />
-</label><br />
-	<f:form.textfield property="fax" /><br />
-<label for="message">
-	<f:translate key="tx_partnerlisting_domain_model_lead.message" />
-</label><br />
-	<f:form.textarea property="message" cols="40" rows="15" /><br />
+<div class="form-group">
+	<label for="name">
+		<f:translate key="tx_partnerlisting_domain_model_lead.name" />
+	</label>
+	<f:form.textfield property="name" class="form-control" id="name"/>
+</div>
+<div class="form-group">
+	<label for="email">
+		<f:translate key="tx_partnerlisting_domain_model_lead.email" />
+	</label>
+	<f:form.textfield property="email" class="form-control" id="email"/>
+</div>
+<div class="form-group">
+	<label for="street">
+		<f:translate key="tx_partnerlisting_domain_model_lead.street" />
+	</label>
+	<f:form.textfield property="street" class="form-control" id="street"/>
+</div>
+<div class="form-group">
+	<label for="postCodeAndCity">
+		<f:translate key="tx_partnerlisting_domain_model_lead.post_code_and_city" />
+	</label>
+	<f:form.textfield property="postCodeAndCity" class="form-control" id="postCodeAndCity" />
+</div>
+<div class="form-group">
+	<label for="phone">
+		<f:translate key="tx_partnerlisting_domain_model_lead.phone" />
+	</label>
+	<f:form.textfield property="phone" class="form-control" id="phone" />
+</div>
+<div class="form-group">
+	<label for="fax">
+		<f:translate key="tx_partnerlisting_domain_model_lead.fax" />
+	</label>
+	<f:form.textfield property="fax" class="form-control" id="fax" />
+</div>
+<div class="form-group">
+	<label for="message">
+		<f:translate key="tx_partnerlisting_domain_model_lead.message" />
+	</label>
+	<f:form.textarea property="message" cols="40" rows="15" class="form-control" id="message" />
+</div>
+<f:form.hidden property="receiver" value="{partner}" />
 </html>

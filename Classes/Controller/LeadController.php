@@ -65,8 +65,32 @@ class LeadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function createAction(\ThomasWoehlke\PartnerListing\Domain\Model\Lead $newLead)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See http://wiki.typo3.org/T3Doc/Extension_Builder/Using_the_Extension_Builder#1._Model_the_domain', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
         $this->leadRepository->add($newLead);
-        $this->redirect('list');
+        $arguments = array( 'partner' => $newLead->getReceiver());
+
+        $emailBody  = "Nachricht von ihrer Webseite bei Lentree Cosmetique: \n\n";
+        $emailBody .= "Name: ".$newLead->getName()." \n";
+        $emailBody .= "Email: ".$newLead->getEmail()." \n";
+        $emailBody .= "Strasse: ".$newLead->getStreet()." \n";
+        $emailBody .= "PLZ, Ort: ".$newLead->getPostCodeAndCity()." \n";
+        $emailBody .= "Telefon: ".$newLead->getPhone()." \n";
+        $emailBody .= "Fax: ".$newLead->getFax()." \n";
+        $emailBody .= "Nachricht: ".$newLead->getMessage()." \n\n";
+        $emailBody .= "Mit freundlichen Grüßen\n\n";
+        $emailBody .= "Ihr Team von Lentree Cosmetique\n";
+        $emailBody .= "http://www.lentreecosmetique.de\n";
+
+        $mail = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
+        $mail->setSubject('Nachricht von ihrer Webseite bei Lentree Cosmetique');
+        $mail->setFrom(array($newLead->getEmail() => $newLead->getName()));
+        $mail->setTo(array($newLead->getReceiver()->getEmail() => $newLead->getReceiver()->getName()));
+        $mail->setBody($emailBody);
+        $mail->send();
+
+        $flashMessage = 'Ihre Nachricht wurde an '.$newLead->getReceiver()->getName().' versandt';
+
+        $this->addFlashMessage($flashMessage, '', \TYPO3\CMS\Core\Messaging\AbstractMessage::OK, false);
+
+        $this->redirect('show','Partner',null,$arguments);
     }
 }
