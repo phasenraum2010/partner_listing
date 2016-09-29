@@ -74,18 +74,18 @@ class Partner extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $city = '';
 
     /**
-     * contactPerson
-     *
-     * @var string
-     */
-    protected $contactPerson = '';
-
-    /**
      * country
      *
      * @var string
      */
     protected $country = '';
+
+    /**
+     * contactPerson
+     *
+     * @var string
+     */
+    protected $contactPerson = '';
 
     /**
      * info

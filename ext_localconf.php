@@ -9,11 +9,13 @@ call_user_func(
             'ThomasWoehlke.PartnerListing',
             'Partnerlisting',
             [
-                'Partner' => 'list, show'
+                'Partner' => 'list, show',
+                'Lead' => 'list, show'
             ],
             // non-cacheable actions
             [
-                'Partner' => ''
+                'Partner' => '',
+                'Lead' => ''
             ]
         );
 

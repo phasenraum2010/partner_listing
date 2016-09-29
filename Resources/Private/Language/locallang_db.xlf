@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-28T14:23:47Z" product-name="partner_listing">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-29T12:11:05Z" product-name="partner_listing">
 		<header/>
 		<body>
 			<trans-unit id="tx_partnerlisting_domain_model_partner">
@@ -56,6 +56,33 @@
 			</trans-unit>
 			<trans-unit id="tx_partnerlisting_domain_model_partner.terms_and_conditions">
 				<source>Terms And Conditions</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead">
+				<source>Lead</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.post_code_and_city">
+				<source>Post Code And City</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_partnerlisting_domain_model_lead.receiver">
+				<source>Receiver</source>
 			</trans-unit>
 		</body>
 	</file>
