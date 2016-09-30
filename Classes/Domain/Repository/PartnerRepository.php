@@ -15,6 +15,13 @@ namespace ThomasWoehlke\PartnerListing\Domain\Repository;
 /**
  * The repository for Partners
  */
-class PartnerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
-{
+class PartnerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+
+    public function findByPostCode($plz) {
+        $query = $this->createQuery();
+        $query->matching(
+            $query->like('postCode', $plz.'%')
+        );
+        return $query->execute();
     }
+}

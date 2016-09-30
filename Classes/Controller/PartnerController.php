@@ -27,13 +27,21 @@ class PartnerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action list
-     *
+     * @param string $plz
      * @return void
      */
-    public function listAction()
+    public function listAction($plz=null)
     {
-        $partners = $this->partnerRepository->findAll();
-        $this->view->assign('partners', $partners);
+        if($plz==null){
+            $partners = $this->partnerRepository->findAll();
+            $this->view->assign('partners', $partners);
+        } else {
+            if(ctype_digit($plz) && (strlen($plz)==1)) {
+                $this->addFlashMessage($plz, 'PLZ', \TYPO3\CMS\Core\Messaging\AbstractMessage::OK, false);
+                $partners = $this->partnerRepository->findByPostCode($plz);
+                $this->view->assign('partners', $partners);
+            }
+        }
     }
 
     /**

@@ -60,6 +60,11 @@ class Realurl {
                             ),
                         ),
                     ),
+                    'plz' => array(
+                        array(
+                            'GETvar' => 'tx_partnerlisting_partnerlisting[plz]',
+                        ),
+                    ),
                 ),
             ),
         ) );
