@@ -24,3 +24,11 @@ call_user_func(
 );
 
 
+/**
+ * Add RealURL configuration
+ */
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['partner_listing'] =
+    'EXT:partner_listing/Classes/Custom/Realurl.php:ThomasWoehlke\\PartnerListing\\Custom\\Realurl->addAutoConfig';
+
+
