@@ -30,13 +30,41 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 	<f:for each="{partners}" as="partner">
 		<tr>
-			<td><f:link.action action="show" arguments="{partner : partner}"> {partner.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{partner : partner}"> {partner.street}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{partner : partner}"> {partner.postCode}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{partner : partner}"> {partner.city}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{partner : partner}"> {partner.contactPerson}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{partner : partner}"> {partner.email}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{partner : partner}"> {partner.phone}</f:link.action></td>
+			<td>
+				<f:link.action action="show" arguments="{partner : partner}" noCacheHash="true">
+					{partner.name}
+				</f:link.action>
+			</td>
+			<td>
+				<f:link.action action="show" arguments="{partner : partner}" noCacheHash="true">
+					{partner.street}
+				</f:link.action>
+			</td>
+			<td>
+				<f:link.action action="show" arguments="{partner : partner}" noCacheHash="true">
+					{partner.postCode}
+				</f:link.action>
+			</td>
+			<td>
+				<f:link.action action="show" arguments="{partner : partner}" noCacheHash="true">
+					{partner.city}
+				</f:link.action>
+			</td>
+			<td>
+				<f:link.action action="show" arguments="{partner : partner}" noCacheHash="true">
+					{partner.contactPerson}
+				</f:link.action>
+			</td>
+			<td>
+				<f:link.action action="show" arguments="{partner : partner}" noCacheHash="true">
+					{partner.email}
+				</f:link.action>
+			</td>
+			<td>
+				<f:link.action action="show" arguments="{partner : partner}" noCacheHash="true">
+					{partner.phone}
+				</f:link.action>
+			</td>
 		</tr>
 	</f:for>
 </table>

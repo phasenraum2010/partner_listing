@@ -69,13 +69,13 @@ class LeadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $arguments = array( 'partner' => $newLead->getReceiver());
 
         $emailBody  = "Nachricht von ihrer Webseite bei Lentree Cosmetique: \n\n";
-        $emailBody .= "Name: ".$newLead->getName()." \n";
-        $emailBody .= "Email: ".$newLead->getEmail()." \n";
-        $emailBody .= "Strasse: ".$newLead->getStreet()." \n";
-        $emailBody .= "PLZ, Ort: ".$newLead->getPostCodeAndCity()." \n";
-        $emailBody .= "Telefon: ".$newLead->getPhone()." \n";
-        $emailBody .= "Fax: ".$newLead->getFax()." \n";
-        $emailBody .= "Nachricht: ".$newLead->getMessage()." \n\n";
+        $emailBody .= "Name:      ".$newLead->getName()." \n";
+        $emailBody .= "Email:     ".$newLead->getEmail()." \n";
+        $emailBody .= "Strasse:   ".$newLead->getStreet()." \n";
+        $emailBody .= "PLZ, Ort:  ".$newLead->getPostCodeAndCity()." \n";
+        $emailBody .= "Telefon:   ".$newLead->getPhone()." \n";
+        $emailBody .= "Fax:       ".$newLead->getFax()." \n";
+        $emailBody .= "Nachricht: \n".$newLead->getMessage()." \n\n";
         $emailBody .= "Mit freundlichen Grüßen\n\n";
         $emailBody .= "Ihr Team von Lentree Cosmetique\n";
         $emailBody .= "http://www.lentreecosmetique.de\n";

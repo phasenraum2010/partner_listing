@@ -14,11 +14,13 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Partner' => '',
-                'Lead' => 'create'
+                'Partner' => 'list, show',
+                'Lead' => 'list, show, new, create'
             ]
         );
 
     },
     $_EXTKEY
 );
+
+
