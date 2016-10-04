@@ -17,10 +17,33 @@ namespace ThomasWoehlke\PartnerListing\Domain\Repository;
  */
 class PartnerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
+    /**
+     * @param string $plz
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     */
     public function findByPostCode($plz) {
         $query = $this->createQuery();
         $query->matching(
             $query->like('postCode', $plz.'%')
+        );
+        return $query->execute();
+    }
+
+    /**
+     * @param string $search
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     */
+    public function findBySearchterm($search)
+    {
+        $query = $this->createQuery();
+        $query->matching(
+            $query->logicalOr(
+                $query->like('name', '%'.$search.'%'),
+                $query->like('city', '%'.$search.'%'),
+                $query->like('contactPerson', '%'.$search.'%'),
+                $query->like('info', '%'.$search.'%'),
+                $query->like('service', '%'.$search.'%')
+            )
         );
         return $query->execute();
     }

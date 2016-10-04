@@ -30,3 +30,6 @@ plugin.tx_partnerlisting._CSS_DEFAULT_STYLE (
     margin-right: 30px;
   }
 )
+
+page.includeJSFooter.file1 = EXT:parter_listing/Resources/Public/js/jquery.rwdImageMaps.min.js
+page.includeJSFooter.file2 = EXT:parter_listing/Resources/Public/js/faktura.js

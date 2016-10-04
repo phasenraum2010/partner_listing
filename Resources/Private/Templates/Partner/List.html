@@ -13,22 +13,70 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Partner</h1>
+<h2>Die Lentree Partner Studios</h2>
 
-	<ul>
-		<li><f:link.action action="list" arguments="{plz : 1}" noCacheHash="true">PLZ 1</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 2}" noCacheHash="true">PLZ 2</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 3}" noCacheHash="true">PLZ 3</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 4}" noCacheHash="true">PLZ 4</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 5}" noCacheHash="true">PLZ 5</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 6}" noCacheHash="true">PLZ 6</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 7}" noCacheHash="true">PLZ 7</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 8}" noCacheHash="true">PLZ 8</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 9}" noCacheHash="true">PLZ 9</f:link.action></li>
-		<li><f:link.action action="list" arguments="{plz : 0}" noCacheHash="true">PLZ 0</f:link.action></li>
-	</ul>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<f:image src="EXT:partner_listing/Resources/Public/img/postleitzahlgebiete.gif" width="322" height="441" usemap="#map" id="imagemapdeplz" class="img-responsive"/>
+		<map name="map">
+			<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+			<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+			<!-- #$-:Please do not edit lines starting with "#$" -->
+			<!-- #$VERSION:2.3 -->
+			<!-- #$AUTHOR:Fert -->
+			<area shape="rect" coords="184,59,290,145" alt="Studios im PLZ Gebiet 1" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=1" />
+			<area shape="rect" coords="187,161,302,249" alt="Studios für das PLZ Gebiet 0" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=0" />
+			<area shape="rect" coords="136,255,300,326" alt="Studios im PLZ Gebiet 9" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=9" />
+			<area shape="rect" coords="158,336,299,428" alt="Studios im PLZ Gebiet 8" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=8" />
+			<area shape="rect" coords="10,333,152,427" alt="Studios im PLZ Gebiet 7" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=7" />
+			<area shape="rect" coords="77,258,132,326" alt="Studios im PLZ-Gebiet 6" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=6" />
+			<area shape="rect" coords="8,219,74,285" alt="Studios im PLZ Gebiet 5" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=5" />
+			<area shape="rect" coords="93,148,177,241" alt="Studios im PLZ Gebiet 3" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=3" />
+			<area shape="rect" coords="9,128,90,214" alt="Studios im PLZ Gebiet 4" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=4" />
+			<area shape="rect" coords="101,47,180,145" alt="Studios im PLZ Gebiet 2" href="/studios/?tx_partnerlisting_partnerlisting%5Bplz%5D=2" />
+		</map>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<figure class=" center-block" style="margin-bottom: 10px;" >
+			<f:image class="img-responsive " title="Partnerstudios Lentreecosmetique" alt="Partnerstudios Lentreecosmetique" src="EXT:partner_listing/Resources/Public/img/partnerstudios-300x133.jpg" width="1140" height="506" />
+		</figure>
+		<p>Unsere Kosmetikprodukte und Beauty-Behandlungenkönnen Sie in Deutschland in Beauty-Studios, Schönheitsfarmen und SPA’s erhalten.</p>
+		<p>Bitte wählen Sie auf der Karte Ihren
+		Postleitzahlen-Bereich und darin einen
+		Lentree Partner in Ihrer Nähe aus.</p>
+		<br/>
+		<f:form action="list" additionalAttributes="{role:'form'}">
+			<div class="form-inline">
+				<div class="form-group">
+					<f:form.textfield name="search" value="{search}" class="form-control"/>
+					<f:form.submit value="Suche!" class="btn-xs btn-primary" />
+				</div>
+			</div>
+		</f:form>
+	</div>
+</div>
 
 <f:flashMessages />
+
+		<!--
+		<div class="col-lg-6">
+		<ul>
+			<li><f:link.action action="list" arguments="{plz : 1}" noCacheHash="true">PLZ 1</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 2}" noCacheHash="true">PLZ 2</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 3}" noCacheHash="true">PLZ 3</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 4}" noCacheHash="true">PLZ 4</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 5}" noCacheHash="true">PLZ 5</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 6}" noCacheHash="true">PLZ 6</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 7}" noCacheHash="true">PLZ 7</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 8}" noCacheHash="true">PLZ 8</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 9}" noCacheHash="true">PLZ 9</f:link.action></li>
+			<li><f:link.action action="list" arguments="{plz : 0}" noCacheHash="true">PLZ 0</f:link.action></li>
+		</ul>
+		</div>
+		-->
+
+
+<br/>
 
 <table class="tx_partnerlisting table table-striped" >
 	<tr>
