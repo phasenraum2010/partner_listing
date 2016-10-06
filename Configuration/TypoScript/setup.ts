@@ -29,7 +29,11 @@ plugin.tx_partnerlisting._CSS_DEFAULT_STYLE (
     height: auto;
     margin-right: 30px;
   }
+  #tx-partner-listing-microsite #google-map {
+	width:100%;
+	height:500px;
+  }
 )
 
-page.includeJSFooter.file1 = EXT:parter_listing/Resources/Public/js/jquery.rwdImageMaps.min.js
-page.includeJSFooter.file2 = EXT:parter_listing/Resources/Public/js/faktura.js
+page.includeJSFooter.file1 = EXT:partner_listing/Resources/Public/js/jquery.rwdImageMaps.min.js
+page.includeJSFooter.file2 = EXT:partner_listing/Resources/Public/js/faktura.js

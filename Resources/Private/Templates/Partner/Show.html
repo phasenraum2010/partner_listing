@@ -18,5 +18,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:flashMessages />
 <f:render partial="Partner/Properties" arguments="{partner:partner}" />
 <f:link.action action="list" noCacheHash="true">Back to list</f:link.action>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key={googleApiKey}" type="text/javascript"></script>
+  <f:format.raw>{googleMap}</f:format.raw>
 </f:section>
 </html>

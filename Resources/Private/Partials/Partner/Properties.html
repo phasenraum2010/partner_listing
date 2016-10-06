@@ -6,6 +6,7 @@
 <ul class="nav nav-tabs" role="tablist">
 	<li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Unser Studio</a></li>
 	<li role="presentation"><a href="#service" aria-controls="service" role="tab" data-toggle="tab">Leistungen</a></li>
+	<li role="presentation"><a id="anfahrt-tab" href="#anfahrt" aria-controls="anfahrt" role="tab" data-toggle="tab">Anfahrt</a></li>
 	<li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Kontakt</a></li>
 	<li role="presentation"><a href="#termsAndConditions" aria-controls="termsAndConditions" role="tab" data-toggle="tab">AGB</a></li>
 	<li role="presentation"><a href="#imprint" aria-controls="imprint" role="tab" data-toggle="tab">Impressum</a></li>
@@ -33,6 +34,10 @@
 		<div id="service-text">
 			<f:format.html>{partner.service}</f:format.html>
 		</div>
+	</div>
+	<div role="tabpanel" class="tab-pane" id="anfahrt">
+		<h3>Anfahrt</h3>
+		<div id="google-map"></div>
 	</div>
 	<div role="tabpanel" class="tab-pane" id="contact">
 		<h3>Kontakt</h3>
